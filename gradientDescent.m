@@ -21,6 +21,7 @@ for iter = 1:num_iters
 
 
     prediction = X * theta - y;
+    
     theta = theta - ((alpha * 1/m) * sum(prediction .* X))';
 
 

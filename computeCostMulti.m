@@ -14,9 +14,10 @@ J = 0;
 %               You should set J to the cost.
 
 predictions = X * theta;
-error = (predictions - y);
+squaredError = (predictions - y).^2;
 
-J = 1/(2*m) * (error' * error);
+J = 1/(2*m) * sum(squaredError);
+
 
 
 
